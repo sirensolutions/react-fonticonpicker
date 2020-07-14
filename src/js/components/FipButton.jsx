@@ -86,6 +86,15 @@ class FipButton extends React.PureComponent {
 		return this.renderIcon(this.props.value);
 	}
 
+	renderCurrentSelection() {
+		if (!this.props.isMulti && this.props.value) {
+			return (
+				<span className="rfipbtn__selection">{this.props.value}</span>
+			);
+		}
+		return <React.Fragment />;
+	}
+
 	render() {
 		const handlers = {
 			onClick: this.handleClick,
@@ -106,6 +115,7 @@ class FipButton extends React.PureComponent {
 			<div className={elmClass} ref={this.props.domRef} {...handlers}>
 				<div className="rfipbtn__current">
 					{this.renderCurrentIcons()}
+					{this.renderCurrentSelection()}
 				</div>
 				<div className={btnClass}>
 					<i

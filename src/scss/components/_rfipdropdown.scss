@@ -11,14 +11,6 @@
 	&__selector {
 		overflow: hidden;
 		padding: 16px;
-	}
-
-	// For animation
-	&.fipappear-enter-active,
-	&.fipappear-exit-active {
-		.rfipdropdown__selector {
-			transition: max-height 300ms ease-out, padding 300ms ease-out;
-			padding: 16px;
-		}
+		min-height: 400px;
 	}
 }
