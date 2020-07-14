@@ -210,6 +210,7 @@ class FontIconPicker extends React.PureComponent {
 	 * It checks if event came from outside
 	 * If so, then close the dropdown
 	 */
+	// eslint-disable-next-line react/sort-comp
 	handleOuterClick = /* istanbul ignore next */ event => {
 		const { target } = event;
 		// is it inner?
@@ -220,6 +221,7 @@ class FontIconPicker extends React.PureComponent {
 		// close the dropdown
 		this.closeDropdown();
 	};
+
 	handleEscapeKeyboard = /* istanbul ignore next */ event => {
 		if (event.keyCode === 27) {
 			this.closeDropdown();
@@ -374,6 +376,25 @@ class FontIconPicker extends React.PureComponent {
 		});
 	};
 
+	defaultIconRenderer = icon => {
+		if (this.props.renderUsing === 'class') {
+			return <i className={icon} />;
+		}
+		const attributes = {
+			[this.props.renderUsing]: this.props.convertHex
+				? convertToHex(icon)
+				: icon,
+		};
+		return <i {...attributes} />;
+	};
+
+	getIconRenderer() {
+		if (typeof this.props.renderFunc === 'function') {
+			return this.props.renderFunc;
+		}
+		return this.defaultIconRenderer;
+	}
+
 	handlePortalEnter = /* istanbul ignore next */ node => {
 		const selectorNode = node.childNodes[0];
 		this.resetPortalStyle(selectorNode);
@@ -414,25 +435,10 @@ class FontIconPicker extends React.PureComponent {
 		selectorNode.style.maxHeight = height;
 	};
 	handlePortalExiting = /* istanbul ignore next */ node => {
-		const selectorNode = node.childNodes[0];
-		selectorNode.style.maxHeight = '0px';
-		selectorNode.style.paddingTop = '0px';
-		selectorNode.style.paddingBottom = '0px';
-	};
-
-	renderIcon = icon => {
-		if (typeof this.props.renderFunc === 'function') {
-			return this.props.renderFunc(icon);
-		}
-		if (this.props.renderUsing === 'class') {
-			return <i className={icon} />;
-		}
-		const attributes = {
-			[this.props.renderUsing]: this.props.convertHex
-				? convertToHex(icon)
-				: icon,
-		};
-		return <i {...attributes} />;
+		// const selectorNode = node.childNodes[0];
+		// selectorNode.style.maxHeight = '0px';
+		// selectorNode.style.paddingTop = '0px'; 		// Disabled to prevent jerk action due to min-height
+		// selectorNode.style.paddingBottom = '0px';
 	};
 
 	render() {
@@ -452,7 +458,7 @@ class FontIconPicker extends React.PureComponent {
 			allCatPlaceholder: this.props.allCatPlaceholder,
 			searchPlaceholder: this.props.searchPlaceholder,
 			noIconPlaceholder: this.props.noIconPlaceholder,
-			renderIcon: this.renderIcon,
+			renderIcon: this.getIconRenderer(),
 			handleChangeValue: this.handleChangeValue,
 			handleChangeCategory: this.handleChangeCategory,
 			handleChangePage: this.handleChangePage,
@@ -467,7 +473,7 @@ class FontIconPicker extends React.PureComponent {
 					domRef={this.fipButtonRef}
 					isMulti={this.props.isMulti}
 					value={this.state.value}
-					renderIcon={this.renderIcon}
+					renderIcon={this.getIconRenderer()}
 					handleDeleteValue={this.handleDeleteValue}
 					noSelectedPlaceholder={this.props.noSelectedPlaceholder}
 				/>

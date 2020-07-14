@@ -26,6 +26,11 @@
 			}
 		}
 
+		// selection
+		&__selection {
+			position: inherit;
+		}
+
 		// icon
 		&__icon {
 			border: 1px solid $icon-border-color;

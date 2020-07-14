@@ -1,4 +1,13 @@
 /**
+ * Filter duplicate values from source.
+ * @param {array} sourceArray
+ * @return {array} Unique values from sourceArray.
+ */
+function getUniqueValues(sourceArray) {
+	return [...new Set(sourceArray)];
+}
+
+/**
  * Flatten a categorized source and return both categories and flattened items.
  * @param {object} source The source object where key represent categories and it has array of items
  * @param {string|null} category The category key to look for
@@ -29,7 +38,7 @@ export function flattenPossiblyCategorizedSource(source, category = null) {
 	Object.keys(sourceCopy).forEach(cat => {
 		flattened = [...flattened, ...sourceCopy[cat]];
 	});
-	return flattened;
+	return getUniqueValues(flattened);
 }
 
 /**
