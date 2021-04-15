@@ -1,0 +1,4 @@
+defaults:
+  actions:
+    backport:
+      ignore_conflicts: false
