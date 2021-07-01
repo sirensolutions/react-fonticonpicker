@@ -198,3 +198,21 @@ export function fuzzySearch(needle, haystack) {
 	return true;
 }
 /* eslint-enable */
+
+/**
+ * Simple substring search
+ *
+ * @param {string} needle
+ * @param {string} haystack
+ */
+export function substringSearch(needle, haystack) {
+	const lowerNeedle = needle.toLowerCase();
+	const lowerHaystack = haystack.toLowerCase();
+	const parts = lowerHaystack.split(/-| |,|;|:/);
+	for (let p = 0; p < parts.length; p += 1) {
+		if (parts[p].startsWith(lowerNeedle)) {
+			return true;
+		}
+	}
+	return false;
+}

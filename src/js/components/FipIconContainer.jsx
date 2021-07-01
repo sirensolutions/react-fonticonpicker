@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import className from 'classnames';
 import {
 	flattenPossiblyCategorizedSource,
-	fuzzySearch,
+	substringSearch,
 	getSourceType,
 	InvalidSourceException,
 } from '../helpers/iconHelpers';
@@ -118,7 +118,7 @@ class FipIconContainer extends React.PureComponent {
 		const nSearchSet = [];
 
 		iconSet.forEach((value, index) => {
-			if (fuzzySearch(searchString, currentSearchSet[index])) {
+			if (substringSearch(searchString, currentSearchSet[index])) {
 				if (!nIconSet.includes(value)) {
 					nIconSet.push(value);
 				}
