@@ -9,7 +9,7 @@
  * @link https://github.com/fontIconPicker/react-fonticonpicker
  * @license MIT
  * 
- * Copyright (c) 2021 Swashata Ghosh <swashata@wpquark.com>
+ * Copyright (c) 2022 Swashata Ghosh <swashata@wpquark.com>
  * 
  * This software is released under the MIT License.
  * https://opensource.org/licenses/MIT
