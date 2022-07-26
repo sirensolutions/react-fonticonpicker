@@ -171,6 +171,11 @@ exports[`Multi Picker With Category & Search 1`] = `
                   ×
                 </span>
               </span>
+              <span
+                class="rfipbtn__selection"
+              >
+                57347
+              </span>
             </div>
             <div
               class="rfipbtn__button rfipbtn__button--open"
@@ -221,6 +226,11 @@ exports[`Multi Picker With Category & Search 1`] = `
             >
               ×
             </span>
+          </span>
+          <span
+            className="rfipbtn__selection"
+          >
+            57347
           </span>
         </div>
         <div
@@ -288,6 +298,11 @@ exports[`Multi Picker With Category & Search 1`] = `
                     >
                       ×
                     </span>
+                  </span>
+                  <span
+                    class="rfipbtn__selection"
+                  >
+                    57347
                   </span>
                 </div>
                 <div
@@ -1567,6 +1582,11 @@ exports[`Multi Picker Without Category & Search 1`] = `
                   ×
                 </span>
               </span>
+              <span
+                class="rfipbtn__selection"
+              >
+                57347
+              </span>
             </div>
             <div
               class="rfipbtn__button rfipbtn__button--open"
@@ -1617,6 +1637,11 @@ exports[`Multi Picker Without Category & Search 1`] = `
             >
               ×
             </span>
+          </span>
+          <span
+            className="rfipbtn__selection"
+          >
+            57347
           </span>
         </div>
         <div
@@ -1684,6 +1709,11 @@ exports[`Multi Picker Without Category & Search 1`] = `
                     >
                       ×
                     </span>
+                  </span>
+                  <span
+                    class="rfipbtn__selection"
+                  >
+                    57347
                   </span>
                 </div>
                 <div
@@ -2854,6 +2884,11 @@ exports[`Multi Picker Without Category & With Search 1`] = `
                   ×
                 </span>
               </span>
+              <span
+                class="rfipbtn__selection"
+              >
+                57347
+              </span>
             </div>
             <div
               class="rfipbtn__button rfipbtn__button--open"
@@ -2904,6 +2939,11 @@ exports[`Multi Picker Without Category & With Search 1`] = `
             >
               ×
             </span>
+          </span>
+          <span
+            className="rfipbtn__selection"
+          >
+            57347
           </span>
         </div>
         <div
@@ -2971,6 +3011,11 @@ exports[`Multi Picker Without Category & With Search 1`] = `
                     >
                       ×
                     </span>
+                  </span>
+                  <span
+                    class="rfipbtn__selection"
+                  >
+                    57347
                   </span>
                 </div>
                 <div

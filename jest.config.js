@@ -1,11 +1,14 @@
 module.exports = {
-	verbose: true,
-	collectCoverageFrom: [
-		'src/js/components/**/*.{js,jsx}',
-		'src/js/helpers/**/*.{js,jsx}',
-	],
-	collectCoverage: true,
-	setupTestFrameworkScriptFile: './scripts/enzymeSetup.js',
-	testPathIgnorePatterns: ['/node_modules/', '.eslintrc'],
-	snapshotSerializers: ['enzyme-to-json/serializer'],
+  verbose: true,
+  collectCoverageFrom: [
+    'src/js/components/**/*.{js,jsx}',
+    'src/js/helpers/**/*.{js,jsx}',
+  ],
+  collectCoverage: true,
+  setupTestFrameworkScriptFile: './scripts/enzymeSetup.js',
+  testPathIgnorePatterns: ['/node_modules/', '.eslintrc'],
+  snapshotSerializers: ['enzyme-to-json/serializer'],
+  testEnvironmentOptions: {
+    url: 'http://localhost/'
+  }
 };
