@@ -18,6 +18,8 @@ const defaultMultiValue = [];
 const defaultStringValue = '';
 
 class FontIconPicker extends React.PureComponent {
+	static displayName = 'FontIconPicker';
+
 	static propTypes = {
 		icons: PropTypes.oneOfType([
 			PropTypes.arrayOf(PropTypes.string),
@@ -74,8 +76,6 @@ class FontIconPicker extends React.PureComponent {
 		noSelectedPlaceholder: 'Select icon',
 		closeOnSelect: false,
 	};
-
-	static displayName = 'FontIconPicker';
 
 	static getDerivedStateFromProps(nextProps, prevState) {
 		// Init the state

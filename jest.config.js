@@ -8,4 +8,7 @@ module.exports = {
 	setupTestFrameworkScriptFile: './scripts/enzymeSetup.js',
 	testPathIgnorePatterns: ['/node_modules/', '.eslintrc'],
 	snapshotSerializers: ['enzyme-to-json/serializer'],
+  testEnvironmentOptions: {
+    url: 'http://localhost/'
+  }
 };
