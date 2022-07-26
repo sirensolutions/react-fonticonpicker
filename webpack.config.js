@@ -1,7 +1,7 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin'); // eslint-disable-line // eslint-disable-line
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin'); // eslint-disable-line
-const CleanWebpackPlugin = require('clean-webpack-plugin'); // eslint-disable-line
+const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // eslint-disable-line
 const webpack = require('webpack'); // eslint-disable-line
 const pkg = require('./package.json');
 
@@ -146,7 +146,7 @@ module.exports = {
 		],
 	},
 	plugins: [
-		new CleanWebpackPlugin(['dist']),
+		new CleanWebpackPlugin(),
 		addBanner,
 		new UglifyJSPlugin({
 			sourceMap: true,
