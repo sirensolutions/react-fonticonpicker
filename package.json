@@ -1,6 +1,6 @@
 {
   "name": "@fonticonpicker/react-fonticonpicker",
-  "version": "1.2.0-siren-5",
+  "version": "1.2.0-siren-6",
   "description": "A react component to show a picker element to select font icons or SVG.",
   "main": "dist/fonticonpicker.react.js",
   "directories": {
@@ -10,7 +10,7 @@
     "test": "eslint src/js/** src/docs/components/** src/docs/helpers/** && stylelint src/scss/** && jest",
     "start": "webpack-dev-server --hot --config webpack.dev.config.js --host 0.0.0.0 --open",
     "docs": "webpack --config webpack.doc.config.js",
-    "build": "webpack --config webpack.config.js && node scripts/cleanupDist.js",
+    "build": "webpack --config webpack.config.js && node scripts/cleanupDist.js && node scripts/replaceAssetUrl.js",
     "prepare": "webpack --config webpack.config.js && node scripts/cleanupDist.js"
   },
   "repository": {
