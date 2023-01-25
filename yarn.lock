@@ -16048,9 +16048,9 @@ __metadata:
   linkType: hard
 
 "ua-parser-js@npm:^0.7.9":
-  version: 0.7.17
-  resolution: "ua-parser-js@npm:0.7.17"
-  checksum: 0075370877febc47b1f65d727e44bb4c95c60af7487e939fd92b2f105ac7b579ac21659e1b57ff399ffb2cf954c7e039fb7089f83f4796bce339524ce42b059c
+  version: 0.7.33
+  resolution: "ua-parser-js@npm:0.7.33"
+  checksum: 1510e9ec26fcaf0d8c6ae8f1078a8230e8816f083e1b5f453ea19d06b8ef2b8a596601c92148fd41899e8b3e5f83fa69c42332bd5729b931a721040339831696
   languageName: node
   linkType: hard
 
