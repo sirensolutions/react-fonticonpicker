@@ -103,7 +103,7 @@
   },
   "engines": {
     "node": "16.16.0",
-    "yarn": "3.2.1"
+    "yarn": "3.8.2"
   },
-  "packageManager": "yarn@3.2.1"
+  "packageManager": "yarn@3.8.2"
 }
